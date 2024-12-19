@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.message-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.message-container p {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+    animation-delay: var(--delay);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.anhxinchao {
+    position: fixed;
+    /* Đảm bảo ảnh nằm cố định trên màn hình */
+    bottom: 0;
+    /* Đưa ảnh xuống sát cạnh dưới */
+    right: -550px;
+    /* Đưa ảnh sát cạnh phải */
+}
+
+.anhxinchao img {
+    height: auto;
+    /* Giữ tỷ lệ ảnh */
+    max-width: 50%;
+    /* Đảm bảo ảnh không vượt quá 50% chiều rộng màn hình */
+    display: block;
+    /* Đảm bảo không có khoảng trắng dưới ảnh */
+}
+
+.anhxinchao1 {
+    position: fixed;
+    top: -30px;
+    /* Đặt ở góc trên */
+    left: 0;
+    /* Đặt ở góc trái */
+    transform: scaleY(-1);
+    /* Lật ngược ảnh theo trục Y */
+}
+
+.anhxinchao1 img {
+    height: auto;
+    max-width: 50%;
+    /* Đảm bảo ảnh không vượt quá kích thước container */
+}
+
+.hidden {
+    display: none;
+}
+
+.thiep1,
+.thiep2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    /* Tăng kích thước thiệp lên 80% chiều rộng màn hình */
+    max-width: 800px;
+    /* Để thiệp không quá lớn trên màn hình lớn */
+    cursor: pointer;
+}
+
+.thiep1 img,
+.thiep2 img {
+    width: 100%;
+    height: auto;
+}
+
+.action-button {
+    position: absolute;
+    /* Đảm bảo nút được căn chỉnh tuyệt đối so với thiệp */
+    right: 30px;
+    /* Căn nút vào phía phải của thiệp 2 */
+    bottom: 50%;
+    /* Đặt nút ở dưới cùng bên phải */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.action-button:hover {
+    background-color: #45a049;
+    /* Hiệu ứng hover */
+}
+
+.han {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    max-width: 50%;
+}
+
+.anh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caunoi {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Căn giữa ảnh chi tiết */
+
+.anhchitiet {
+    width: 600px;
+    height: 600px;
+    display: none;
+    text-align: center;
+}
+
+
+/* Căn giữa ảnh và thu nhỏ kích thước ảnh */
+
+.anhchitiet img {
+    width: 50%;
+    border-radius: 10px;
+    object-fit: contain;
+    /* Đảm bảo ảnh không bị méo */
+}
+
+
+/* Nút button */
+
+.action-button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}
